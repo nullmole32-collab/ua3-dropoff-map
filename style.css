@@ -166,3 +166,81 @@ body {
 .ua3-marker.driver-pink   .driver-dot { background: #d543bd; }
 .ua3-marker.driver-red    .driver-dot { background: #dc3545; }
 .ua3-marker.driver-green  .driver-dot { background: #28a745; }
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT STYLING
+   ========================================================= */
+
+/* Large screens (TV, desktop) */
+@media (min-width: 1200px) {
+  #controls {
+    width: 350px;
+    font-size: 13px;
+  }
+}
+
+/* Medium screens (laptops, tablets horizontal) */
+@media (max-width: 1199px) and (min-width: 700px) {
+  #controls {
+    width: 280px;
+    font-size: 12px;
+  }
+}
+
+/* Small screens (phones, tablets vertical) */
+@media (max-width: 699px) {
+  #controls {
+    width: 95vw;
+    left: 50%;
+    right: auto;
+    top: 60px;
+    transform: translateX(-50%);
+    font-size: 14px;
+    max-height: 50vh;
+  }
+
+  .form-row label {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .form-row input,
+  .form-row select {
+    width: 100%;
+  }
+}
+
+
+/* Mode bar on small screens */
+@media (max-width: 699px) {
+  #modeBar {
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+
+  #modeBar button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  #modeLabel {
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 699px) {
+  .legend {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 699px) {
+  .leaflet-bottom.leaflet-right .legend {
+    margin-bottom: 80px; /* keep above each other */
+  }
+}
