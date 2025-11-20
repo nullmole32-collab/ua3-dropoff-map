@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Mode bar */
+#modeBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+}
+#modeBar button {
+  padding: 4px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#viewModeBtn {
+  background: #555;
+  color: #fff;
+}
+#editModeBtn {
+  background: #007bff;
+  color: #fff;
+}
+#modeLabel {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+#map {
+  height: calc(100vh - 40px); /* full height minus mode bar */
+  width: 100vw;
+}
+
+#controls {
+  position: absolute;
+  top: 60px;           /* below the mode bar */
+  right: 10px;         /* top-right corner, like the legend */
+  width: 320px;
+  padding: 8px 10px;
+  font-size: 12px;
+  background: rgba(247, 247, 247, 0.96);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 1000;       /* above the map */
+}
+#controls h2 {
+  margin: 0 0 4px 0;
+  font-size: 13px;
+}
+.form-row {
+  margin-bottom: 6px;
+}
+.form-row label {
+  display: inline-block;
+  width: 110px;
+  font-size: 12px;
+}
+.form-row input,
+.form-row select {
+  padding: 2px 4px;
+  font-size: 12px;
+  width: 180px;
+}
+
+#status {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.legend {
+  background: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 1px solid #444;
+}
+
+.driver-legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 1px solid #444;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Driver marker styles */
+.ua3-marker {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+
+.ua3-marker .marker-circle {
+  width: 24px;   /* match iconSize width */
+  height: 24px;  /* match iconSize height */
+  border-radius: 50%;
+  border: 2px solid #333;
+  background: gray; /* default base color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box; /* border included in 24x24 */
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.ua3-marker .driver-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ffffff;
+  background: #999999; /* default driver color */
+}
+
+/* Base color by hub/expecting status (outer circle) */
+.ua3-marker.hub .marker-circle {
+  background: orange;
+  border-color: orange;
+}
+.ua3-marker.expecting .marker-circle {
+  background: green;
+  border-color: green;
+}
+.ua3-marker.not-expecting .marker-circle {
+  background: gray;
+  border-color: gray;
+}
+
+/* Driver color variants (inner dot) */
+.ua3-marker.driver-blue   .driver-dot { background: #007bff; }
+.ua3-marker.driver-pink   .driver-dot { background: #d543bd; }
+.ua3-marker.driver-red    .driver-dot { background: #dc3545; }
+.ua3-marker.driver-green  .driver-dot { background: #28a745; }
