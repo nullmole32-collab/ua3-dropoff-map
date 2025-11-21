@@ -204,91 +204,6 @@ body {
   }
 }
 
-/* === MOBILE / SMALL SCREENS === */
-@media (max-width: 768px) {
-  /* Make base text bigger on phones */
-  body {
-    font-size: 18px;
-  }
-
-  /* First legend (Key) */
-.leaflet-bottom.leaflet-right .legend:first-of-type {
-    margin-bottom: 10px;
-}
-
-/* Second legend (Driver Colors) */
-.leaflet-bottom.leaflet-right .legend:last-of-type {
-    margin-bottom: 0;
-}
-
-
-  /* Mode bar */
-  #modeBar {
-    flex-wrap: wrap;
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  #modeBar button {
-    padding: 8px 14px;
-    font-size: 1rem;
-  }
-
-  #modeLabel {
-    width: 100%;
-    text-align: center;
-    margin-top: 6px;
-  }
-
-  /* Controls panel – centered, bigger text, full width */
-  #controls {
-    width: 95vw;
-    left: 50%;
-    right: auto;
-    top: 60px;
-    transform: translateX(-50%);
-    font-size: 1rem;
-    max-height: 55vh;
-  }
-
-  .form-row {
-    margin-bottom: 10px;
-  }
-
-  .form-row label {
-    display: block;
-    width: 100%;
-    margin-bottom: 4px;
-    font-size: 0.95rem;
-  }
-
-  .form-row input,
-  .form-row select {
-    width: 100%;
-    font-size: 1rem;
-    padding: 4px 6px;
-  }
-
-  #status {
-    font-size: 0.85rem;
-  }
-
-  /* Legends bigger and easier to read */
-  .legend {
-    font-size: 0.95rem;
-    padding: 8px 12px;
-  }
-
-  .legend-item {
-    margin-bottom: 6px;
-  }
-
-  /* Give some extra breathing room from screen edge */
-  .leaflet-bottom.leaflet-right .legend {
-    margin-bottom: 70px;
-  }
-}
-
 /* --- MOBILE OPTIMIZED EDIT PANEL --- */
 @media (max-width: 700px) {
 
@@ -324,7 +239,7 @@ body {
   /* Smaller panel, lower height */
   #controls {
     width: 90vw;
-    padding: 6px 8px;            /* tighter padding */
+    padding: 10px 10px;            /* tighter padding */
     font-size: 0.85rem;
     top: 90px;
     left: 50%;
@@ -359,7 +274,6 @@ body {
   #addBtn {
     margin-top: 4px;
     padding: 6px 8px;
-
 
   }
 
