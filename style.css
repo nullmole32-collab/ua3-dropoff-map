@@ -196,6 +196,17 @@ body {
     font-size: 18px;
   }
 
+  /* First legend (Key) */
+.leaflet-bottom.leaflet-right .legend:first-of-type {
+    margin-bottom: 10px;
+}
+
+/* Second legend (Driver Colors) */
+.leaflet-bottom.leaflet-right .legend:last-of-type {
+    margin-bottom: 0;
+}
+
+
   /* Mode bar */
   #modeBar {
     flex-wrap: wrap;
