@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-size: 16px; /* base size for desktop */
 }
 
 /* Mode bar */
@@ -188,40 +189,23 @@ body {
   }
 }
 
-/* Small screens (phones, tablets vertical) */
-@media (max-width: 699px) {
-  #controls {
-    width: 95vw;
-    left: 50%;
-    right: auto;
-    top: 60px;
-    transform: translateX(-50%);
-    font-size: 14px;
-    max-height: 50vh;
+/* === MOBILE / SMALL SCREENS === */
+@media (max-width: 768px) {
+  /* Make base text bigger on phones */
+  body {
+    font-size: 18px;
   }
 
-  .form-row label {
-    width: 100%;
-    margin-bottom: 4px;
-  }
-
-  .form-row input,
-  .form-row select {
-    width: 100%;
-  }
-}
-
-
-/* Mode bar on small screens */
-@media (max-width: 699px) {
+  /* Mode bar */
   #modeBar {
     flex-wrap: wrap;
-    font-size: 13px;
+    font-size: 1rem;
+    padding: 10px;
   }
 
   #modeBar button {
-    padding: 6px 12px;
-    font-size: 14px;
+    padding: 8px 14px;
+    font-size: 1rem;
   }
 
   #modeLabel {
@@ -229,18 +213,53 @@ body {
     text-align: center;
     margin-top: 6px;
   }
-}
 
-@media (max-width: 699px) {
+  /* Controls panel – centered, bigger text, full width */
+  #controls {
+    width: 95vw;
+    left: 50%;
+    right: auto;
+    top: 60px;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    max-height: 55vh;
+  }
+
+  .form-row {
+    margin-bottom: 10px;
+  }
+
+  .form-row label {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .form-row input,
+  .form-row select {
+    width: 100%;
+    font-size: 1rem;
+    padding: 4px 6px;
+  }
+
+  #status {
+    font-size: 0.85rem;
+  }
+
+  /* Legends bigger and easier to read */
   .legend {
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 0.95rem;
     padding: 8px 12px;
   }
-}
 
-@media (max-width: 699px) {
+  .legend-item {
+    margin-bottom: 6px;
+  }
+
+  /* Give some extra breathing room from screen edge */
   .leaflet-bottom.leaflet-right .legend {
-    margin-bottom: 80px; /* keep above each other */
+    margin-bottom: 70px;
   }
 }
+
