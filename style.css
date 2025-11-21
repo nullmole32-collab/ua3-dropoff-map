@@ -291,9 +291,10 @@ body {
     margin-bottom: 6px;
   }
 
-  /* Give some extra breathing room from screen edge */
+  /* Legends nicely inside bottom-right corner */
   .leaflet-bottom.leaflet-right {
-  bottom: -20px;   /* default is 0; increase to move them UP */
-  right: 1px;    /* adjust if you want space from the edge */
-}
+    bottom: 10px;
+    right: 8px;
+  }
+
 }
