@@ -203,40 +203,51 @@ body {
     font-size: 12px;
   }
 }
+/*
 
-/* --- MOBILE OPTIMIZED EDIT PANEL --- */
-@media (max-width: 700px) {
 
-  /* force all text to wrap instead of overflowing */
-  #controls,
-  #controls * {
-    white-space: normal !important;
-    overflow-wrap: break-word !important;
-    word-wrap: break-word !important;
+
+
+
+*/
+/* === MOBILE / SMALL SCREENS === */
+@media (max-width: 768px) {
+  /* Make base text bigger on phones */
+  body {
+    font-size: 18px;
   }
 
-  /* form rows adapt to narrow width */
-  .form-row {
+  /* First legend (Key) */
+.leaflet-bottom.leaflet-right .legend:first-of-type {
+    margin-bottom: 10px;
+}
+
+/* Second legend (Driver Colors) */
+.leaflet-bottom.leaflet-right .legend:last-of-type {
+    margin-bottom: 0;
+}
+
+
+  /* Mode bar */
+  #modeBar {
+    flex-wrap: wrap;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  #modeBar button {
+    padding: 8px 14px;
+    font-size: 1rem;
+  }
+
+  #modeLabel {
     width: 100%;
-    display: block;
+    text-align: center;
+    margin-top: 6px;
   }
 
-  /* labels wrap instead of stretching horizontally */
-  .form-row label {
-    display: block;
-    width: 100%;
-    white-space: normal;
-  }
-
-  /* inputs remain full width, no overflow */
-  .form-row input,
-  .form-row select {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-
-  /* Smaller panel, lower height */
+  /* Controls panel – centered, bigger text, full width */
+    /* Smaller panel, lower height */
   #controls {
     width: 90vw;
     padding: 10px 10px;            /* tighter padding */
@@ -248,49 +259,41 @@ body {
     overflow-y: auto;
   }
 
-  #controls h2 {
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-  }
-
   .form-row {
-    margin-bottom: 4px;          /* less vertical space */
+    margin-bottom: 10px;
   }
 
   .form-row label {
     display: block;
     width: 100%;
-    font-size: 0.75rem;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
   }
 
   .form-row input,
   .form-row select {
     width: 100%;
-    padding: 3px 5px;            /* tighter inputs */
+    font-size: 1rem;
+    padding: 4px 6px;
+  }
+
+  #status {
     font-size: 0.85rem;
   }
 
-  #addBtn {
-    margin-top: 4px;
-    padding: 6px 8px;
-
+  /* Legends bigger and easier to read */
+  .legend {
+    font-size: 0.95rem;
+    padding: 8px 12px;
   }
 
-  #modeBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2000;
-}
+  .legend-item {
+    margin-bottom: 6px;
+  }
 
+  /* Give some extra breathing room from screen edge */
   .leaflet-bottom.leaflet-right {
-  bottom: -80px;   /* default is 0; increase to move them UP */
+  bottom: -20px;   /* default is 0; increase to move them UP */
   right: 1px;    /* adjust if you want space from the edge */
 }
-
-
-
-
 }
