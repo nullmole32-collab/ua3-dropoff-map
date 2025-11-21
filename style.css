@@ -1,7 +1,10 @@
 html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  overflow: hidden;      /* <-- stops accidental scrolling */
+  overflow: hidden;      /* stop page scrolling */
 }
+
 
 body {
   font-family: sans-serif;
@@ -51,8 +54,9 @@ body {
   top: 40px;  /* height of the mode bar */
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0;  /* fill down to the bottom of the viewport */
 }
+
 
 
 #controls {
@@ -282,7 +286,7 @@ body {
   }
 
   /* Legends bigger and easier to read */
-  .legend {
+    .legend {
     font-size: 0.95rem;
     padding: 8px 12px;
   }
@@ -291,10 +295,9 @@ body {
     margin-bottom: 6px;
   }
 
-  /* Legends nicely inside bottom-right corner */
+  /* Put both legends clearly ABOVE the phone's bottom bar */
   .leaflet-bottom.leaflet-right {
-    bottom: 10px;
+    bottom: 10px;   /* try 80; if still too close, go 100 */
     right: 8px;
   }
-
 }
